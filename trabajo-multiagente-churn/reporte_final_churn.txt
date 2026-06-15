@@ -1,0 +1,88 @@
+
+INFORME FINAL DEL SISTEMA MULTIAGENTE
+
+1. DESCRIPCIÓN GENERAL
+
+Se desarrolló un sistema multiagente de Machine Learning utilizando el dataset
+Telco Customer Churn. El objetivo principal fue predecir la variable Churn,
+es decir, identificar si un cliente tiene probabilidad de abandonar el servicio
+de una empresa de telecomunicaciones.
+
+El sistema está compuesto por tres agentes:
+
+- Agente 1 Normalizador:
+  Se encargó de cargar el dataset original, eliminar columnas innecesarias,
+  tratar valores faltantes, convertir variables categóricas a numéricas,
+  escalar variables numéricas y generar un dataset limpio.
+
+- Agente 2 Entrenador:
+  Recibió el dataset procesado, detectó automáticamente que el problema era de
+  tipo clasificacion, entrenó varios modelos de Machine Learning y comparó
+  sus métricas para seleccionar el mejor modelo.
+
+- Agente 3 Comunicador:
+  Recibió los resultados del entrenamiento y generó este reporte en lenguaje
+  natural utilizando un enfoque basado en Transformer o, en caso de error,
+  una plantilla automática.
+
+2. MODELO SELECCIONADO
+
+El modelo seleccionado como ganador fue:
+
+Regresion Logistica
+
+Este modelo obtuvo una métrica principal de:
+
+0.7928
+
+Fue seleccionado porque presentó el mejor rendimiento general entre los modelos
+evaluados por el Agente 2.
+
+3. MÉTRICAS DEL MODELO GANADOR
+
+Las métricas obtenidas por el modelo ganador fueron:
+
+{'accuracy': 0.8, 'precision': 0.790428041793057, 'recall': 0.8, 'f1_score': 0.7927726374825216}
+
+En problemas de clasificación como la predicción de churn, estas métricas
+permiten analizar no solo cuántas predicciones fueron correctas, sino también
+qué tan bien el modelo identifica clientes que realmente podrían abandonar
+el servicio.
+
+4. INTERPRETACIÓN DE RESULTADOS
+
+El modelo permite anticipar clientes con riesgo de abandono. Esto puede ayudar
+a una empresa de telecomunicaciones a tomar decisiones preventivas, como ofrecer
+promociones, mejorar la atención al cliente o revisar contratos antes de que el
+cliente decida cancelar el servicio.
+
+5. CONCLUSIONES
+
+El sistema multiagente cumplió con el flujo solicitado:
+
+Dataset CSV original
+↓
+Agente 1 Normalizador
+↓
+Dataset limpio
+↓
+Agente 2 Entrenador
+↓
+Modelo y métricas
+↓
+Agente 3 Comunicador
+↓
+Reporte final en lenguaje natural
+
+La arquitectura permite separar responsabilidades y automatizar el proceso de
+Machine Learning desde la limpieza de datos hasta la explicación final de los
+resultados.
+
+6. RECOMENDACIONES
+
+Se recomienda:
+- Probar más modelos en futuras versiones.
+- Ajustar hiperparámetros.
+- Usar técnicas para manejar desbalance de clases.
+- Incorporar explicabilidad con importancia de variables.
+- Actualizar el modelo periódicamente con nuevos datos.
